@@ -27,7 +27,7 @@ local tag_mappings = {
   h4 = { left = "#### ", right = "\n\n" },
   h5 = { left = "##### ", right = "\n\n" },
   h6 = { left = "###### ", right = "\n\n" },
-  span = {},
+  span = { left = " ", right = " " },
   nav = {},
   header = {},
   div = { left = "\n", right = "\n" },
@@ -36,9 +36,9 @@ local tag_mappings = {
   ul = { right = "\n" },
   ol = { right = "\n" },
   dl = { right = "\n" },
-  dt = { right = "\n" },
+  dt = { left = "\n> ", right = "\n" },
+  dd = { left = ": ", right = "\n" },
   figure = { right = "\n" },
-  dd = { left = ": " },
   pre = { left = "\n```\n", right = "\n```\n" },
   code = { left = "`", right = "`" },
   samp = { left = "`", right = "`" },
@@ -61,6 +61,7 @@ local tag_mappings = {
   annotation = { left = "[", right = "]" },
   semantics = {},
   mspace = { left = " " },
+  wbr = {},
   msup = { right = "^" },
   mfrac = { right = "/" },
   mrow = {},
@@ -89,6 +90,7 @@ local inline_tags = {
   "small",
   "var",
   "kbd",
+  "wbr",
 }
 
 local skipable_tags = {

@@ -53,7 +53,8 @@ end
 
 local doc_previewer = previewers.new_buffer_previewer({
   title = "Preview",
-  keep_last_buf = true,
+  -- BUG: When true this causes an invalid winoow ID with telescope, when a previous preview had content but current does not.
+  -- keep_last_buf = true,
   define_preview = function(self, entry)
     local bufnr = self.state.bufnr
 
